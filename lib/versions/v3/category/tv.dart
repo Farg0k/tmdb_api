@@ -315,7 +315,7 @@ class Tv extends Category<V3> {
   /// ```
   ///
   Future<Map> getVideos(
-    String tvId, {
+    int tvId, {
     String? language,
     String? includeVideoLanguage,
   }) {
@@ -348,7 +348,7 @@ class Tv extends Category<V3> {
   /// Map result = await tmdb.v3.tv.getWatchProviders(103);
   /// ```
   ///
-  Future<Map> getWatchProviders(String tvId) {
+  Future<Map> getWatchProviders(int tvId) {
     return _v._query('$_endPoint/$tvId/watch/providers');
   }
 
